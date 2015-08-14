@@ -5,7 +5,7 @@ module.exports = function(req, res, next) {
   .then(function(err) {
     req.models = db;
     next();
-  }, function (err) { 
+  }, function (err) {
     console.log('An error occurred while creating the table:', err);
     next(err);
   });
